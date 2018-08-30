@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Curso de programación gratuito con garantía de empleo para jovenes en la industría tecnológica">
+    <meta name="keywords" content="angularJS, javascript, javaee, java, bootstrap, mongodb, ux, ui, front-end, back-end, fullstack, ReactJS, aws, google cloud, algoritmos, programacion, curso de programacion, programacion orientada a objetos, arquitectura web, desarrollo web, AJAX, empleo tecnología, programador, startup, programacion de apps, pagina web, aplicaciones web, app">
+    <meta name="author" content="Rigoberto Alvarez - generation">
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/favicon.png?alt=media&token=0984b5aa-8050-4793-b0c2-9f587f7f3d80">
+    <title>
+        Generation México - Capacitación para el empleo
+    </title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
+    <style>
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <link href="assets/assets-for-demo/demo.css" rel="stylesheet" />
+    <link href="assets/assets-for-demo/vertical-nav.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121990046-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121990046-1');
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google AdWords: 811542615 --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-811542615"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-811542615'); gtag('config', 'AW-931134143');
+    </script>
+    <!-- Event snippet for Click de registro en landing de retail conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-931134143/dTbcCKruuIUBEL_1_7sD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1820043494729770');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1820043494729770&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+</head>
+
+<body class="landing-page">
+    <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand">Generation</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="dropdown nav-item">
+                        <a href="#quienes" class="nav-link" onload="configure();">
+                            <i class="material-icons">info</i> ¿Quiénes somos?
+                        </a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#contenido" class="nav-link">
+                            <i class="material-icons">list</i> Contenido del curso
+                        </a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#donde" class="nav-link">
+                            <i class="material-icons">location_on</i> Dónde estamos
+                        </a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a onclick="return gtag_report_conversion('https://genrecruiting.generation.org/register/31/205/943?recruitingPartner=LandingMarioMolina&referrerDetails=botonTop&recruitmentChannel=digital');" rel="nofollow"
+                     href="https://genrecruiting.generation.org/register/31/205/943?recruitingPartner=LandingMarioMolina&referrerDetails=botonTop&recruitmentChannel=digital">
+                                    <button id="botonLead" class="btn btn-info"><b>Regístrate</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="confi" class="page-header header-filter" data-parallax="true" style=" background-image: url('https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/back2.JPG?alt=media&token=c968f479-5db6-422a-b4eb-5567a6a02baa'); ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="title">Programa TecMM de desarrollo Full-stack</h1>
+                    <h4>Aprende a trabajar con tecnologías de desarrollo Front-End, Back-End  y manejo de datos y arranca tu nueva carrera en la industría de la tecnología. <!--Arrancamos <strong>en septiembre, de 9:00 am a 6:00 pm</strong>--></h4>
+                    <br>
+                    <a href="https://www.youtube.com/embed/FFy5tG4HR8M" target="_blank" class="btn btn-danger btn-raised btn-lg">
+                        <i class="fa fa-play"></i> Mira nuestro video
+                    </a>
+                    <a onclick="return gtag_report_conversion('https://genrecruiting.generation.org/register/31/205/943?recruitingPartner=LandingMarioMolina&referrerDetails=botonMedio&recruitmentChannel=digital');" rel="nofollow" href="https://genrecruiting.generation.org/register/31/205/943?recruitingPartner=LandingMarioMolina&referrerDetails=botonMedio&recruitmentChannel=digital" class="btn btn-info btn-raised btn-lg">
+                        <i id="botonLead" class="fa fa-plus"></i> Regístrate ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main main-raised">
+        <div class="container">
+            <div class="section text-center">
+                <div class="row">
+                    <a name="quienes">
+                        <div class="col-md-8 ml-auto mr-auto" id="quienes">
+
+                            <h2 class="title">¿Quiénes somos?</h2>
+                            <h5 class="description">Fundada en 2015, Generation es una organización sin fines de lucro que tiene como objetivo combatir el desempleo juvenil a través del desarrollo de programas de capacitación para el empleo. Con operaciones en más de 20 ciudades de 8 países, hemos graduado a más de 20,000 jóvenes en todo el mundo. </br></br>A través de nuestra probada metodología de enseñanza, ayudamos a nuestros alumnos a desarrollar las competencias, mentalidades y comportamientos necesarios para tener una carrera profesional exitosa.
+                            <br><br>
+                            El programa de desarrollo fullstack en Java te ayuda a desarrollar lógica de programación, habiliades de desarrollo de plataformas en Java y un nivel de inglés suficiente para trabajar en la industria. Adicionalmente, al terminar el curso, se te garantiza una entresvista laboral con empleadores líderes de la industria, como:
+                            <li>Oracle</li>
+                            <li>Rappi</li>
+                            <li>Wizeline</li>
+                            <li>Intel</li>
+                            <br><br>
+
+                            </h5>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <iframe width="320" height="200" src="https://www.youtube.com/embed/FFy5tG4HR8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              </div>
+                              <div class="col-md-6">
+                                <iframe src="https://player.vimeo.com/video/182727676" width="320" height="200" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="img-raised rounded img-fluid" alt="Raised Image" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/cohort5.jpg?alt=media&token=2c6011fa-131e-4e49-b5e5-74a7713fee27">
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="img-raised rounded img-fluid" alt="Raised Image" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/salon212.jpg?alt=media&token=959b6cdc-a5b1-4ba9-889e-eee6fbfe86cf">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="section text-center">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2 class="title" id="contenido">Contenido del curso</h2>
+                        <h5 class="description">El curso se compone de sesiones de: 
+                        <li>Teória y práctica de programación que te ayudan a desarrollar las hablididades técnicas necesarias</li> 
+                        <li>Ingles enfocado en el mundo de la tecnología</li> 
+                        <li>Habilidedes y comportamientos necesarios para desenvolverte de manera exitosa en un trabajo</li> 
+                        </br>
+                        Adicional al contendio de las sesiones, todos nuestros alumnos cuentan con el apoyo de una mentora que los guiará durante todo el proceso y los ayudará a desarrollar las mentalidades y comportamientos necesarios para alcanzar su máximo potencial. El equipo de mentoría también ayuda a nuestros alumnos a construir un perfil profesional (CV, GitHub, LinkedIn, etc.) así como a realizar prácticas y simulaciones de entrevista para familiarizarse con el proceso y mazimizar las probabilidades de una contratación.
+                        </br>
+                        <br>
+                        <br>
+                        El contenido técnico abarca diversos temas; pero los puntos principales que aprenderás dentro del programa son:
+                        </h5>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="info text-justify">
+                                <h4 class="info-title">Módulo 1. Preparación previa</h4>
+                                <ul>
+                                  <li>Arquitectura de las aplicaciónes web y tecnologías disponibles</li>
+                                  <li>Gestion del software  y de los proyectos de desarrollo</li>
+                                  <li>Algoritmos</li>
+                                  <li>Fundamentos del desarrollo orientado a objetos</li>
+                                  <li>Fundamentos de la programación Java</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info text-justify">
+                              <h4 class="info-title">Módulo 2. Implementación de aplicaciones web</h4>
+                              <ul>
+                                <li>Fundamentos UX y tecnologias Front-End (Bootstrap, AngularJS, ReactJS)</li>
+                                <li>Servudores Google y Amazon</li>
+                                <li>Aplicaciones web y MVC</li>
+                                <li>Testing de aplicaciones y aseguramiento de calidad</li>
+                                <li>Despliegue de aplicaciones</li>
+                                <li>Diseño de bases de datos relacionales y no relacionales</li>
+                                <li>Servidores de bases de datos e implementación de la capa de Persistencia</li>
+                                <li>Aplicaciones AJAX</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info text-justify">
+                              <h4 class="info-title">Módulo 3. Desarrollo avanzado</h4>
+                              <ul>
+                                <li>Patrones de diseño y capa de Business Logic</li>
+                                <li>Aplicaciones basadas en JSF y Struts</li>
+                                <li>Aplicaciones basadas en Spring Framework / SpringBoot</li>
+                                <li>Persistencia basada en JPA e Hibernate</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info text-justify">
+                              <h4 class="info-title">Módulo 4. Servicios web</h4>
+                              <ul>
+                                <li>SOA y Servicios Web</li>
+                                <li>Servicios Web SOAP</li>
+                                <li>Servicios Web RESTFul</li>
+                                <li>Clientes SPA</li>
+                              </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon icon-info">
+                                    <i class="material-icons">code</i>
+                                </div>
+                                <h4 class="info-title">Front-End</h4>
+                                <p>HTML, CSS, JavaScript, Bootstrap, ReactJS, AngularJS, VueJS</p>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon icon-success">
+                                    <i class="material-icons">laptop_mac</i>
+                                </div>
+                                <h4 class="info-title">Back-End</h4>
+                                <p> Java SE, Java EE, Springboot, Struts, JSF,Servidores Web, Amazon Web Services</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon icon-danger">
+                                    <i class="material-icons">blur_linear</i>
+                                </div>
+                                <h4 class="info-title">Datos</h4>
+                                <p>MySQL, MongoDB, Hibernate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="section text-center">
+                <h2 class="title" id="equipo">Nuestro equipo</h2>
+                <div class="team">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card card-profile card-plain">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-header card-header-image">
+                                            <a href="#pablo">
+                                                <img class="img" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/rigo.jpg?alt=media&token=dd279239-ba19-4700-b69b-675d707d2363">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Rigoberto Álvarez</h4>
+                                            <h6 class="category text-muted">Coordinador de programas tecnológicos</h6>
+                                            <p class="card-description">
+                                                Desarrollador de Software Senior egresado de la Licenciatura en informática de la Universidad de Guadalajara, divulgador de Software Libre, con experiencia en desarrollo de aplicaciones móviles en Android e iOS, soluciones Back-End privadas y gubernamentales,
+                                                y enseñanza en educación superior en la Universidad de Guadalajara. Inventor, pasa su tiempo libre desarrollando y aprendiendo nuevas tecnologías.
+
+                                            </p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+                                            <a href="https://twitter.com/Rigo_Bono_" class="btn btn-just-icon btn-link btn-twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/alfredo-rigoberto-alvarez-suarez-039891b0/" class="btn btn-just-icon btn-link btn-facebook">
+                                                <i class="fa fa-linkedin-square"></i>
+                                            </a>
+                                            <a href="https://www.instagram.com/rigobonoalvarez/" class="btn btn-just-icon btn-link btn-instagram">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-profile card-plain">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-header card-header-image">
+                                            <a href="#pablo">
+                                                <img class="img" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/karla.jpg?alt=media&token=514b4b88-5e87-45e5-add5-f9aa10e1c2d4">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Karla Fernandez</h4>
+                                            <h6 class="category text-muted">Coordinadora de mentoras</h6>
+                                            <p class="card-description">
+                                                Licenciada en psicología, ingresó en Generation en la primer generación de programas STEM en Guadalajara como mentora de grupo y actualmente es coordinadora de Mentoría y líder del proyecto de Mentoría a escala. Karla ha colaborado con empresas como UBER,
+                                                Seguros Monterrey, Lockton y AT&T. Sus hobbies son bailar y pasar tiempo en familia, tiene una tortuga y un perro, le encanta la naturaleza.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card card-profile card-plain">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-header card-header-image">
+                                            <a href="#pablo">
+                                                <img class="img" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/marijo.jpeg?alt=media&token=1b3faf46-f8f5-4cd2-b196-6fd6037cca30">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Maria Jose Sandoval</h4>
+                                            <h6 class="category text-muted">Mentora</h6>
+                                            <p class="card-description">
+                                                María José González Sandoval. Conocida como Marijó. Psicóloga, inclinada por la rama clínica y de salud. Me encantan las neurociencias. Soy amante de los animales, me gusta viajar y probar nuevos platillos. También me gusta el café, mi día no empieza
+                                                sin uno, y mejor si lo comparto con alguien.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+                                            <a href="https://www.instagram.com/mariajosegss/?hl=es-la" class="btn btn-just-icon btn-link btn-instagram">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                            <a href="https://www.facebook.com/profile.php?id=100022125039447" class="btn btn-just-icon btn-link btn-facebook">
+                                                <i class="fa fa-facebook-square"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-profile card-plain">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-header card-header-image">
+                                            <a href="#pablo">
+                                                <img class="img" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/oscar.png?alt=media&token=0e8855df-a8e7-4db0-8dc4-e0bfcaa0bd61">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Oscar Santana</h4>
+                                            <h6 class="category text-muted">Profesor de Java BackEnd</h6>
+                                            <p class="card-description">
+                                                Doctorado en Tecnologías de la Información. Investigador en áreas como machine learning, análisis de datos e ingeniería de datos. Cuenta con 20 años de experiencia como docente en programación, bases de datos, ingeniería de software, multimedia y telecomunicaciones.
+                                                Más de 15 años de experiencia como ingeniero de software e investigador académico. Apasionado por el software, con grandes habilidades como comunicador, responsible y confinable.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-profile card-plain">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-header card-header-image">
+                                            <a href="#pablo">
+                                                <img class="img" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/karen.jpeg?alt=media&token=1f104c86-813a-4b14-add8-891fd2e4ec3d">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Karen Martínez Briseño</h4>
+                                            <h6 class="category text-muted">Mentora</h6>
+                                            <p class="card-description">Psicóloga, graduada del ITESO. Experiencia en diferentes ámbitos como educación especial, psicología criminal, mentoría, entre otros. Recién casada, disfruta de las pequeñas cosas de la vida, le gustan los animales,
+                                                principalmente los elefantes, el teatro y pasar tiempo con su familia. Su mayor hobby es la lectura (literatura) y bailar.</p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-profile card-plain">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-header card-header-image">
+                                            <a href="#pablo">
+                                                <img class="img" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/rafa.jpeg?alt=media&token=5db2c725-4bb2-4c93-8378-fb17d0843618">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Rafael Morales</h4>
+                                            <h6 class="category text-muted">Profesor de Java BackEnd</h6>
+                                            <p class="card-description">Ingeniero Biomédico egresado de la Universidad de Guadalajara en México. Le gusta practicar deporte, en específico escalada y cañonismo, teniendo ya 5 años de experiencia. Apasionado de lo que hace, lo que lo
+                                                ha llevado a muchos destinos, así también su inclinación por el desarrollo de software que ayudó a extender sus habilidades técnica. Actualmente es profesor en Generation México en el programa Java Back-End,
+                                                que para él es la forma de regresar a la comunidad un poco de lo que le ha ofrecido, cambiando vidas, cambiando al mundo.</p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-profile card-plain">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-header card-header-image">
+                                            <a href="#pablo">
+                                                <img class="img" src="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/mane.jpg?alt=media&token=563f7ffc-4794-433f-b9b9-e0360daa90f9">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="card-title">María Fernanda Alcázar </h4>
+                                            <h6 class="category text-muted">Mentora</h6>
+                                            <p class="card-description">Mejor conocida como Mané, psicóloga de espíritu jesuita, interesada en el área de la salud. Apasionada por la buena comida y las sobremesas largas. Me encanta conocer nuevas personas y culturas, soy adicta a
+                                                los viajes, a las nuevas experiencias y al chocolate. Cuido mucho mis relaciones personales, ya que considero que son lo más importante que tengo. Intento que la risa forme parte de todos mis días y pienso
+                                                que una casa sin un perro, no es un hogar.</p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="section section-contacts">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2 class="text-center title" id="donde">Dónde estamos</h2>
+                        <h4 class="text-center description">Los cursos son exclusivos para alumnos del Tecnológico Mario Molina y se llevaran a cabo en sus instalaciones.
+                        </h4>
+                        <div class="embed-container">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59724.23776398103!2d-103.46486715878169!3d20.67914326652693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xebc30a10c9f1c38f!2sInstituto+Tecnologico+Mario+Molina!5e0!3m2!1sen!2smx!4v1532998371158" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-contacts" id="Registrate">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h2 class="text-center title">¡Regístrate ya! El curso es <strong>totalmente gratuito</strong> y tiene cupo limitado. </h2>
+                        <h4 class="text-left description">Los requisitos para formar parte del programa son:
+                          <ul>
+                            <li>Tener entre 19 y 29 años.</li>
+                            <li>Licenciatura o carrera técnica terminada.</li>
+                            <li>Pasar nuestros test de admisión.</li>
+                          </ul>
+                          Iniciamos cursos este próximo 3 de Septiembre de 2018. El curso es presencial, y tiene un horario de 9:00 a 18:00 horas de lunes a viernes.
+                        </h4>
+
+
+                        <div class="row">
+                            <div class="col-md-4 ml-auto mr-auto text-center">
+                                <a onclick="return gtag_report_conversion('https://genrecruiting.generation.org/register/31/205/943?recruitingPartner=LandingMarioMolina&referrerDetails=botonAbajo&recruitmentChannel=digital');" href="https://genrecruiting.generation.org/register/31/205/943?recruitingPartner=LandingMarioMolina&referrerDetails=botonAbajo&recruitmentChannel=digital">
+                                    <button id="botonLead" class="btn btn-primary btn-info">
+                                        Registrarme
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer ">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a href="https://www.generation.org/mexico/">
+                            Generation México
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/generationmexico/">
+                            Siguenos en Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/generation_mex">
+                            Twitter
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright pull-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, made with <i class="material-icons">favorite</i> by
+                <a href="https://twitter.com/Rigo_Bono_">Rigoberto Álvarez</a> for a better Generation.
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.onload = configure();
+
+        function configure() {
+            var url = window.location.search.substr(1);
+            var param1 = findGetParameter("gen");
+            if (param1 === "male") {
+                document.getElementById('confi').style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/bckgen.jpg?alt=media&token=dadd9cea-05cd-480c-bf56-24fd6ec3c2ee')";
+            } else {
+
+            }
+
+        }
+
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            var items = location.search.substr(1).split("&");
+            for (var index = 0; index < items.length; index++) {
+                tmp = items[index].split("=");
+                if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+            }
+            return result;
+        }
+    </script>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/bootstrap-material-design.js"></script>
+    <script src="assets/js/plugins/moment.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
+    <script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
+    <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+    <script src="assets/js/plugins/jquery.flexisel.js"></script>
+    <script src="assets/assets-for-demo/js/modernizr.js"></script>
+    <script src="assets/assets-for-demo/js/vertical-nav.js"></script>
+    <script src="assets/js/material-kit.js?v=2.0.2"></script>
+    <script src="assets/assets-for-demo/js/material-kit-demo.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB5VDzkVlN-I4pRkNk8Dm-qRq1165DQaug",
+        authDomain: "quierotrabajarmexico.firebaseapp.com",
+        databaseURL: "https://quierotrabajarmexico.firebaseio.com",
+        projectId: "quierotrabajarmexico",
+        storageBucket: "quierotrabajarmexico.appspot.com",
+        messagingSenderId: "272882858697"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- Add Pixel Events to the button's click handler -->
+    <script type="text/javascript">
+      var button = document.getElementById('botonLead');
+      button.addEventListener(
+        'click', 
+        function() { 
+          fbq('track', 'AddToCart');          
+        },
+        false
+      );
+    </script>
+</body>
+
+</html>
