@@ -10,7 +10,7 @@
     <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/favicon.png?alt=media&token=0984b5aa-8050-4793-b0c2-9f587f7f3d80">
     <link rel="canonical" href="https://quierotrabajarmexico.firebaseapp.com/dufry.html">
     <title>
-        Generation | Capacitación para el empleo
+        Generation México | Capacitación para el empleo
     </title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -111,9 +111,8 @@
                         </a>
                     </li>
                     <li class="dropdown nav-item">
-                        <a onclick="return gtag_report_conversion('https://genrecruiting.generation.org/register/31/227/923?recruitingPartner=LandingAfore&referrerDetails=BotonTop');" rel="nofollow"
-                     href="https://genrecruiting.generation.org/register/31/227/923?recruitingPartner=LandingAfore&referrerDetails=BotonTop">
-                                    <button id="botonLead" class="btn btn-info"><b>Regístrate</button>
+                        <a id='links1' rel="nofollow">
+                            <button id="botonLead1" class="btn btn-info"><b>Regístrate</button>
                         </a>
                     </li>
                 </ul>
@@ -131,8 +130,8 @@
                     <a href="https://vimeo.com/182727676" target="_blank" class="btn btn-danger btn-raised btn-lg">
                         <i class="fa fa-play"></i> Mira nuestro video
                     </a>
-                    <a onclick="return gtag_report_conversion('https://genrecruiting.generation.org/register/31/227/923?recruitingPartner=LandingAfore&referrerDetails=BotonMedio');" rel="nofollow" href="https://genrecruiting.generation.org/register/31/227/923?recruitingPartner=LandingAfore&referrerDetails=BotonMedio" class="btn btn-info btn-raised btn-lg">
-                        <i id="botonLead" class="fa fa-plus"></i> Regístrate ahora
+                    <a id='links2' rel="nofollow" class="btn btn-info btn-raised btn-lg">
+                        <i id="botonLead2" class="fa fa-plus"></i> Regístrate ahora
                     </a>
                 </div>
             </div>
@@ -230,7 +229,7 @@
                     <div class="col-md-8 ml-auto mr-auto">
                         <h4 class="info-title"  >Los requisitos para ser parte del programa son:</h4><h4 class="text-left description">
                           <ul>
-                            <li>Tener entre 18 y 29 años</li>
+                            <li>Tener entre 18 y 35 años</li>
                             <li>Preparatoria terminada</li>
                             <li>Tener disponibilidad de tiempo para la totalidad de la capacitación (3 semanas de tiempo completo)</li>
                           </ul>
@@ -254,8 +253,8 @@
                         </div>-->
                         <div class="row">
                             <div class="col-md-4 ml-auto mr-auto text-center">
-                                <a onclick="return gtag_report_conversion('https://genrecruiting.generation.org/register/31/227/923?recruitingPartner=LandingAfore&referrerDetails=BotonFinal');" rel="nofollow" href="https://genrecruiting.generation.org/register/31/227/923?recruitingPartner=LandingAfore&referrerDetails=BotonFinal">
-                                    <button id="botonLead" class="btn btn-primary btn-info">
+                                <a id='links3' rel="nofollow">
+                                    <button id="botonLead3" class="btn btn-primary btn-info">
                                         Regístrate
                                     </button>
                                 </a>
@@ -352,7 +351,7 @@
     </script>
     <!-- Add Pixel Events to the button's click handler -->
     <script type="text/javascript">
-      var button = document.getElementById('botonLead');
+      var button = document.getElementById('botonlead1');
       button.addEventListener(
         'click', 
         function() { 
@@ -360,6 +359,33 @@
         },
         false
       );
+      var button = document.getElementById('botonlead2');
+      button.addEventListener(
+        'click', 
+        function() { 
+          fbq('track', 'AddToCart');          
+        },
+        false
+      );
+      var button = document.getElementById('botonlead3');
+      button.addEventListener(
+        'click', 
+        function() { 
+          fbq('track', 'AddToCart');          
+        },
+        false
+      );
+    </script>
+    <script>
+    var url = window.location.href;
+    var pos = url.indexOf("?");
+    var pos2 = url.indexOf('&');
+    var ad = url.slice(pos+4,pos2);
+    var camp = url.substring(pos2+9);
+    var link = 'https://genrecruiting.generation.org/register/31/227/923?recruitingPartner=landingAfore&referrerDetails='+camp+'&recruitmentChannel='+ad;
+    document.getElementById("links1").setAttribute("href",link);
+    document.getElementById("links2").setAttribute("href",link);
+    document.getElementById("links3").setAttribute("href",link);
     </script>
 
 </body>

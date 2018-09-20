@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="UTF-8">
-    <meta name="description" content="Curso de programación gratuito con garantía de empleo para jovenes en la industría tecnológica">
+    <meta name="description" content="Curso de programación con garantía de empleo para jovenes en la industría tecnológica">
     <meta name="keywords" content="angularJS, javascript, javaee, java, bootstrap, mongodb, ux, ui, front-end, back-end, fullstack, ReactJS, aws, google cloud, algoritmos, programacion, curso de programacion, programacion orientada a objetos, arquitectura web, desarrollo web, AJAX, empleo tecnología, programador, startup, programacion de apps, pagina web, aplicaciones web, app">
     <meta name="author" content="Rigoberto Alvarez - generation">
     <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/generationjavabackend.appspot.com/o/favicon.png?alt=media&token=0984b5aa-8050-4793-b0c2-9f587f7f3d80">
@@ -119,8 +119,8 @@
                         </a>
                     </li>
                     <li class="dropdown nav-item">
-                        <a href="#Registrate" class="nav-link">
-                            <i class="material-icons">person_add</i> <strong>Regístrate</strong>
+                        <<a id='links1' rel="nofollow">
+                            <button id="botonLead" class="btn btn-info"><b>Regístrate</button>
                         </a>
                     </li>
                 </ul>
@@ -133,13 +133,13 @@
             <div class="row">
                 <div class="col-md-6">
                     <h1 class="title">Desarrollador Full-stack</h1>
-                    <h4>Conviertete en un desarrollador Jr, aprendiendo tecnologías de Front-End, Back-End  y manejo de datos, iniciamos <strong>el 16 de Julio, de 9:00 am a 6:00 pm</strong></h4>
+                    <h4>Conviertete en un desarrollador Jr, aprendiendo tecnologías de Front-End, Back-End  y manejo de datos<!--, iniciamos <strong>el 16 de Julio, de 9:00 am a 6:00 pm</strong>--></h4>
                     <br>
                     <a href="https://www.youtube.com/embed/FFy5tG4HR8M" target="_blank" class="btn btn-danger btn-raised btn-lg">
                         <i class="fa fa-play"></i> Mira nuestro video
                     </a>
-                    <a href="#Registrate" class="btn btn-info btn-raised btn-lg">
-                        <i class="fa fa-plus"></i> Regístrate ahora
+                    <a id='links2' rel="nofollow" class="btn btn-info btn-raised btn-lg">
+                        <i id="botonLead" class="fa fa-plus"></i> Regístrate ahora
                     </a>
                 </div>
             </div>
@@ -534,16 +534,16 @@ El contenido técnico abarca diversos temas; pero los puntos principales que apr
                             <li>Licenciatura o carrera técnica terminada.</li>
                             <li>Pasar nuestros test de admisión.</li>
                           </ul>
-                          Iniciamos cursos este próximo 16 de Julio de 2018, el curso es presencial en las oficinas del IJALTI, con un horario de 9:00 a 18:00 horas de lunes a viernes.
-                          <strong>¡Completamente gratis!</strong> Tenemos cupo limitado
+                          <!--Iniciamos cursos este próximo 16 de Julio de 2018, -->El curso es presencial en las oficinas del IJALTI, con un horario de 9:00 a 18:00 horas de lunes a viernes.
+                          <!--<strong>¡Completamente gratis!</strong>--> Tenemos cupo limitado
                         </h4>
 
 
                         <div class="row">
                             <div class="col-md-4 ml-auto mr-auto text-center">
-                                <a onclick="return gtag_report_conversion('https://genrecruiting.generation.org/register/31/205/?recruitingPartner=Generation&referrerDetails=landingJava&recruitmentChannel=other');" href="https://genrecruiting.generation.org/register/31/205/?recruitingPartner=Generation&referrerDetails=landingJava&recruitmentChannel=other">
+                                <a id='links3' rel="nofollow">
                                     <button id="botonLead" class="btn btn-primary btn-info">
-                                        Registrarme
+                                        Regístrate
                                     </button>
                                 </a>
                             </div>
@@ -647,6 +647,17 @@ El contenido técnico abarca diversos temas; pero los puntos principales que apr
         },
         false
       );
+    </script>
+    <script>
+    var url = window.location.href;
+    var pos = url.indexOf("?");
+    var pos2 = url.indexOf('&');
+    var ad = url.slice(pos+4,pos2-1);
+    var camp = url.substring(pos2+9);
+    var link = 'https://genrecruiting.generation.org/register/31/205/845?recruitingPartner=landingJava&referrerDetails=+'+camp+'&recruitmentChannel='+ad;
+    document.getElementById("links1").setAttribute("href",link);
+    document.getElementById("links2").setAttribute("href",link);
+    document.getElementById("links3").setAttribute("href",link);
     </script>
 </body>
 
