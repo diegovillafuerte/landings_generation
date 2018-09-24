@@ -43,10 +43,16 @@
 
       gtag('config', 'UA-121990046-1');
     </script>
-    <!-- Global site tag (gtag.js) - Google AdWords: 811542615 --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-811542615"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-811542615'); gtag('config', 'AW-931134143');
+    <!-- Global site tag (gtag.js) - Google Ads: 931134143 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-931134143"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-931134143');
     </script>
-    <!-- Event snippet for Click de registro en landing de retail conversion page
+    <!-- Event snippet for ClicksLandingAfore conversion page
     In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
     function gtag_report_conversion(url) {
@@ -56,12 +62,13 @@
         }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-931134143/dTbcCKruuIUBEL_1_7sD',
+          'send_to': 'AW-931134143/8s5yCNmG5YkBEL_1_7sD',
           'event_callback': callback
       });
       return false;
     }
     </script>
+
     <!-- Facebook Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
@@ -112,7 +119,7 @@
                     </li>
                     <li class="dropdown nav-item">
                         <a id='links1' rel="nofollow">
-                            <button id="botonLead1" class="btn btn-info"><b>Regístrate</button>
+                            <button id="botonLead1" onclick="gtag_report_conversion('https://genrecruiting.generation.org/register/31/131/1013?recruitingPartner=landingAfore')" class="btn btn-info"><b>Regístrate</button>
                         </a>
                     </li>
                 </ul>
@@ -131,7 +138,7 @@
                         <i class="fa fa-play"></i> Mira nuestro video
                     </a>
                     <a id='links2' rel="nofollow" class="btn btn-info btn-raised btn-lg">
-                        <i id="botonLead2" class="fa fa-plus"></i> Regístrate ahora
+                        <i id="botonLead2" onclick="gtag_report_conversion('https://genrecruiting.generation.org/register/31/131/1013?recruitingPartner=landingAfore')" class="fa fa-plus"></i> Regístrate ahora
                     </a>
                 </div>
             </div>
@@ -254,7 +261,7 @@
                         <div class="row">
                             <div class="col-md-4 ml-auto mr-auto text-center">
                                 <a id='links3' rel="nofollow">
-                                    <button id="botonLead3" class="btn btn-primary btn-info">
+                                    <button id="botonLead3" onclick="gtag_report_conversion('https://genrecruiting.generation.org/register/31/131/1013?recruitingPartner=landingAfore')" class="btn btn-primary btn-info">
                                         Regístrate
                                     </button>
                                 </a>
